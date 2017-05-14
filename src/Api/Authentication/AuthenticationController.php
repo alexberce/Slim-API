@@ -57,7 +57,7 @@ class AuthenticationController
 	 */
 	public function refreshToken(Request $request, Response $response, array $args)
 	{
-	
+		//TODO: Implement refreshToken() method
 	}
 	
 	/**
@@ -67,6 +67,6 @@ class AuthenticationController
 	 */
 	public function invalidateToken(Request $request, Response $response, array $args)
 	{
-	
+		//TODO: Implement invalidateToken() method
 	}
 }
