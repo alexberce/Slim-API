@@ -1,0 +1,18 @@
+<?php
+
+
+namespace Invobox\Api\Response;
+
+
+class ResponseErrorCodes
+{
+	/**
+	 * System error codes
+	 */
+	const RESPONSE_CODE_UNKNOWN_ERROR = '00000-00001';
+	const RESPONSE_BAD_REQUEST = '00000-40000';
+	const RESPONSE_CODE_UNAUTHORIZED = '00000-00401';
+	const RESPONSE_CODE_NOT_FOUND = '00000-00404';
+	const RESPONSE_CODE_METHOD_NOT_ALLOWED = '00000-00405';
+	const RESPONSE_CODE_INTERNAL_SERVER_ERROR = '00000-00500';
+}

@@ -1,0 +1,10 @@
+#IDE
+.idea
+
+#Composer
+/vendor/
+composer.lock
+
+#Logs
+/logs/*
+!/logs/README.md
