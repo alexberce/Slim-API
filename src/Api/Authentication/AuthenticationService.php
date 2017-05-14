@@ -45,9 +45,7 @@ class AuthenticationService
 				'iss' => Environment::getServerUrl(),
 			];
 			
-			$key = 'SECRET_HERE';
-			
-			return JWT::encode($payload, $key);
+			return JWT::encode($payload, Environment::$jwtSecretKey);
 		} catch (DatabaseException $exception) {
 			throw new AuthenticationException('Wrong user credentials', AuthenticationException::WRONG_USER_CREDENTIALS);
 		}

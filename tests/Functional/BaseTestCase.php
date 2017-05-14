@@ -8,6 +8,7 @@ use Slim\App;
 use Slim\Http\Request;
 use Slim\Http\Response;
 use Slim\Http\Environment;
+use Invobox\Api\Utils\Environment as ApiEnvironment;
 
 /**
  * This is an example class that shows how you could set up a method that
@@ -42,7 +43,7 @@ class BaseTestCase extends \PHPUnit_Framework_TestCase
             ]
         );
         
-        $_SERVER['HTTP_HOST'] = 'testing.invobox.com';
+        $_SERVER['HTTP_HOST'] = ApiEnvironment::TESTING_DOMAIN;
 
         // Set up a request object based on the environment
         $request = Request::createFromEnvironment($environment);

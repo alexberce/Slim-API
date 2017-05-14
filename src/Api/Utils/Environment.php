@@ -6,17 +6,21 @@ namespace Invobox\Api\Utils;
 
 class Environment
 {
+	const TESTING_DOMAIN = 'testing.example.com';
+	
 	public static $productionDomains = [
-		'api.invobox.com'
+		'api.example.com'
 	];
 	
 	public static $developmentDomains = [
 		'localhost',
 		'127.0.0.1',
 		'127.0.0.1:8080',
-	    'local.invobox.com',
-	    'testing.invobox.com'
+	    'local.example.com',
+	    self::TESTING_DOMAIN,
 	];
+	
+	public static $jwtSecretKey = 'SECRET_KEY';
 	
 	/**
 	 * @return bool
@@ -33,6 +37,9 @@ class Environment
 		return in_array(self::getServerUrl(), self::$developmentDomains);
 	}
 	
+	/**
+	 * @return mixed
+	 */
 	public static function getServerUrl(){
 		return $_SERVER['HTTP_HOST'];
 	}

@@ -1,12 +1,14 @@
 <?php
 // Application middleware
+use Interop\Container\ContainerInterface;
 use Invobox\Api\Response\ResponseErrorCodes;
 use Invobox\Api\Utils\Environment;
 
+/** @var ContainerInterface $container */
 $app->add(
 	new \Slim\Middleware\JwtAuthentication(
 		[
-			"secret"    => 'SECRET_HERE',
+			"secret"    => Environment::$jwtSecretKey,
 			"relaxed" => Environment::$developmentDomains,
 			"algorithm" => "HS256",
 			"header" => "X-Token",
