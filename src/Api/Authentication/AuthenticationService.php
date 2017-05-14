@@ -5,6 +5,7 @@ namespace Invobox\Api\Authentication;
 use Firebase\JWT\JWT;
 use Invobox\Api\Database\DatabaseException;
 use Invobox\Api\Resources\User\UserService;
+use Invobox\Api\Utils\Environment;
 
 class AuthenticationService
 {
@@ -41,7 +42,7 @@ class AuthenticationService
 					(new \DateTime('+1 day'))
 						->format('Y-m-d H:i:s')
 				),
-				'iss' => 'api.invobox.com',
+				'iss' => Environment::getServerUrl(),
 			];
 			
 			$key = 'SECRET_HERE';

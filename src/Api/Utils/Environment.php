@@ -33,7 +33,7 @@ class Environment
 		return in_array(self::getServerUrl(), self::$developmentDomains);
 	}
 	
-	private static function getServerUrl(){
+	public static function getServerUrl(){
 		return $_SERVER['HTTP_HOST'];
 	}
 }
