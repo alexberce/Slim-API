@@ -7,7 +7,7 @@ return [
 		    'use_annotations' => false,
 	    ],
     	
-        'displayErrorDetails' => true, // set to false in production
+        'displayErrorDetails' => false,
         'addContentLengthHeader' => false, // Allow the web server to send the content-length header
 
         // Renderer settings
